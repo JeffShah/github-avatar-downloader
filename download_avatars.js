@@ -1,7 +1,8 @@
 var request = require('request');
-
+var secrets = require('Secret')
 function getRepoContributors(repoOwner, repoName, cb) {
-    var options = {
+    
+  var options = {
       url: "https://api.github.com/repos/" + repoOwner + "/" + repoName + "/contributors",
       headers: {
         'User-Agent': 'request'
